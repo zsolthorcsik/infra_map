@@ -1,0 +1,8 @@
+[project]
+name = "rail-industrial"
+version = "0.1.0"
+requires-python = ">=3.8"
+dependencies = ["osmnx","geopandas","shapely","folium","plotly","requests"]
+
+[project.scripts]
+rail-industrial = "rail_industrial.cli:main"
