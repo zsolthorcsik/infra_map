@@ -50,7 +50,9 @@ def main():
         "counts": {"features": 0 if feats.empty else int(len(feats))},
         "osmnx_timeout": ox.settings.timeout,
     }
-    paths = save_run(run_dir, buffer_wgs, feats, meta)
+    # after computing line + geom_wgs + buffer_wgs
+    paths = save_run(run_dir, buffer_wgs, feats, meta, route_wgs=geom_wgs)
+
 
     # Maps
     folium_map(buffer_wgs, geom_wgs, feats, CATEGORY_COLORS["Factory/Works"], cfg.add_marker_cluster, path=paths["folium_html"])
