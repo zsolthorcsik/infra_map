@@ -1,0 +1,11 @@
+# Python
+.venv/ __pycache__/ .pytest_cache/ .ipynb_checkpoints/
+*.pyc *.pyo
+
+# Project outputs
+data/                # per-run folders (geojson, html, csv)
+*.geojson
+*.html
+
+# OS/IDE
+.DS_Store .vscode/ .idea/
